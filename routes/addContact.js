@@ -41,4 +41,16 @@ router.get("/:id", (req, res) => {
   }
 })
 
+router.get("/getUserId/:phone",(req, res) => {
+  try{
+    Login.find({Phone: req.params.phone}).then((data) => {
+      res.status(200).json(data);
+      console.log(data);
+    })
+  }
+  catch (err) {
+    res.status(500).send(err);
+  }
+})
+
 module.exports = router;

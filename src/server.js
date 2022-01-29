@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
     res.send('Welcome');
 })
 
+if(process.env.NODE_ENV == 'production'){
+    app.use(express.static("whatsappclone-frontend/build"))
+}
+
 app.listen(port, () => {
     console.log('Listining on port ' + port);
 })

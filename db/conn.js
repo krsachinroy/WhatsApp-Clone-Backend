@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Pusher = require('pusher');
 
 mongoose.connect("mongodb+srv://sachin:sac1234@cluster0.0cuvo.mongodb.net/whatsappdb?retryWrites=true&w=majority", {
     useCreateIndex: true,
@@ -11,3 +10,4 @@ mongoose.connect("mongodb+srv://sachin:sac1234@cluster0.0cuvo.mongodb.net/whatsa
     .catch(() => {
         console.log("Connection failed....")
     });
+  
